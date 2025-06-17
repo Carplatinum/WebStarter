@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Главная</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 16.6667vw;
+      min-width: 200px;
+      height: 100vh;
+      background-color: #343a40;
+      color: #fff;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    .btn-outline-light {
+      color: #f8f9fa;
+      border-color: #f8f9fa;
+    }
+    .btn-outline-light:hover {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      color: #fff;
+    }
+    .nav-link {
+      color: #fff;
+      padding-left: 0;
+    }
+    .nav-link:hover {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .product-card.first {
+      transform: translateX(calc(-2cm * 0.9)) scale(0.9);
+      transition: transform 0.3s;
+    }
+    .product-card.second {
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+    .product-card.third {
+      transform: translateX(calc(2cm * 0.9)) scale(0.9);
+      transition: transform 0.3s;
+    }
+    .buy-button {
+      transition: background-color 0.3s;
+    }
+    .buy-button:hover {
+      background-color: #084298 !important;
+    }
+    @media (max-width: 992px) {
+      .product-card.first,
+      .product-card.second,
+      .product-card.third {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div>
+      <h4 class="bg-primary rounded py-2 px-3 mb-4 user-select-none">Меню</h4>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link">Главная</a>
+        <a href="#" class="nav-link">Категории</a>
+        <a href="#" class="nav-link">Заказы</a>
+        <a href="#" class="nav-link">Контакты</a>
+      </nav>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-outline-light w-100 mb-2">Профиль</button>
+      <button type="button" class="btn btn-outline-light w-100 mb-2">Выход</button>
+      <select class="form-select form-select-sm bg-secondary text-white w-100">
+        <option selected>Леонардо</option>
+        <option value="1">Донателло</option>
+        <option value="2">Рафаэль</option>
+        <option value="3">Микеланджело</option>
+      </select>
+    </div>
+  </aside>
+
+  <main class="page-container d-flex flex-column" style="margin-left:16.6667vw; height:100vh; overflow-y:auto; padding: 2rem;">
+    <section class="d-flex flex-column justify-content-center align-items-center text-center" style="height:150px;">
+      <h1 class="display-3 mb-4">Главная</h1>
+      <p class="lead w-75 mx-auto">Вы находитесь на сайте предназначенном для продажи товаров.</p>
+    </section>
+
+    <section class="px-3 pb-4">
+      <div class="row g-4 justify-content-center" style="max-width: 900px; margin: 0 auto;">
+        <div class="col-md-4">
+          <article class="card shadow-sm rounded d-flex flex-column justify-content-between p-3 bg-white product-card first" style="aspect-ratio:1/1;">
+            <h3 class="fw-semibold">Нунчаки</h3>
+            <div class="fs-5 fw-bold text-success mb-3">$100</div>
+            <p class="text-secondary mb-3" style="white-space: pre-line; flex-grow:1;">
+              10 users included, 2 GB of storage,
+              Email support, Help center access
+            </p>
+            <button class="btn btn-primary align-self-center px-4 py-2 fw-semibold buy-button">Купить</button>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card shadow-sm rounded d-flex flex-column justify-content-between p-3 bg-white product-card second" style="aspect-ratio:1/1;">
+            <h3 class="fw-semibold">Катана</h3>
+            <div class="fs-5 fw-bold text-success mb-3">$200</div>
+            <p class="text-secondary mb-3" style="white-space: pre-line; flex-grow:1;">
+              10 users included, 2 GB of storage,
+              Email support, Help center access
+            </p>
+            <button class="btn btn-primary align-self-center px-4 py-2 fw-semibold buy-button">Купить</button>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card shadow-sm rounded d-flex flex-column justify-content-between p-3 bg-white product-card third" style="aspect-ratio:1/1;">
+            <h3 class="fw-semibold">Боевой посох</h3>
+            <div class="fs-5 fw-bold text-success mb-3">$300</div>
+            <p class="text-secondary mb-3" style="white-space: pre-line; flex-grow:1;">
+              10 users included, 2 GB of storage,
+              Email support, Help center access
+            </p>
+            <button class="btn btn-primary align-self-center px-4 py-2 fw-semibold buy-button">Купить</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
