@@ -10,7 +10,7 @@ class MyHandler(BaseHTTPRequestHandler):
         # Устанавливаем заголовок Content-Type как text/html с кодировкой utf-8
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
-        # Отправляем содержимое файла в ответ
+        # Отправляем в ответ содержимое файла
         self.wfile.write(html.encode('utf-8'))
 
 if __name__ == '__main__':
